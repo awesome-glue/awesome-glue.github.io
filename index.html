@@ -3,8 +3,196 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Awesome Glue">
     <title>Awesome Glue</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <!-- ── Nav ──────────────────────────────────────── -->
+    <nav>
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="assets/logo.png" alt="Awesome Glue" class="logo-icon" width="32" height="32">
+          Awesome Glue
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#get-started">Get Started</a></li>
+          <li><a href="https://github.com/awesome-glue" target="_blank" rel="noopener">GitHub ↗</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Hero ─────────────────────────────────────── -->
+    <header class="hero">
+      <div class="container">
+        <h1>Open-Source Tools<br>for <span class="gradient">AWS Glue</span></h1>
+        <p>Community-built libraries, container images, and utilities that simplify and extend AWS Glue development and maintenance.</p>
+        <div class="hero-actions">
+          <a href="#get-started" class="btn btn-primary">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── Stats ────────────────────────────────────── -->
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Project Categories</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Open Source</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">∞</div>
+          <div class="stat-label">Community Driven</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── About ────────────────────────────────────── -->
+    <section id="about">
+      <div class="container text-center">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Why Awesome Glue?</h2>
+        <p class="section-sub mx-auto">AWS Glue is powerful out of the box, but its ecosystem of reusable tools, container images, and best practices can be difficult to navigate. Awesome Glue brings these resources together.</p>
+        <div style="max-width:680px; margin:0 auto; text-align:left;">
+          <p style="color:var(--text-dim); font-size:.95rem;">
+            We are an independent open-source community building libraries, preconfigured container images, and practical utilities that simplify AWS Glue development. From ETL to analytics workloads, Awesome Glue helps you get started faster, work more efficiently, and share knowledge with the wider community.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured Projects ────────────────────────── -->
+    <section id="projects">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-label">Projects</div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-sub mx-auto">Our planned open-source ecosystem of container images, libraries, and CLI utilities designed to simplify and extend AWS Glue development.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon green">🐳</div>
+              <span class="badge badge-amber"><span class="badge-dot"></span>Coming Soon</span>
+            </div>
+            <span class="card-tag green">Container Image</span>
+            <h3>AWS Glue Image</h3>
+            <p>Prebuilt, optimized Docker images for developing, testing, and running AWS Glue ETL jobs and interactive workloads locally.</p>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon purple">📚</div>
+              <span class="badge badge-amber"><span class="badge-dot"></span>Coming Soon</span>
+            </div>
+            <span class="card-tag">Library</span>
+            <h3>AWS Glue Powertools</h3>
+            <p>Production-ready Python utilities that bring structured logging, metrics, tracing, and reusable helpers to AWS Glue workloads.</p>
+          </div>
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon sky">🛠️</div>
+              <span class="badge badge-amber"><span class="badge-dot"></span>Coming Soon</span>
+            </div>
+            <span class="card-tag sky">CLI Tool</span>
+            <h3>AWS Glue Toolkit</h3>
+            <p>A streamlined CLI for scaffolding projects, configuring environments, and automating the AWS Glue development lifecycle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── Get Started ──────────────────────────────── -->
+    <section id="get-started">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-label">Get Started</div>
+          <h2 class="section-title">Up and Running in Minutes</h2>
+          <p class="section-sub mx-auto">Three simple steps to start using Awesome Glue in your projects.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h4>Browse Repos</h4>
+              <p>Explore our GitHub org to find libraries, images, and tools that fit your use case.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h4>Read the Docs</h4>
+              <p>Each project has documentation with installation instructions, examples, and usage guides.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h4>Start Building</h4>
+              <p>Integrate into your Glue jobs and pipelines. Ask questions, report issues, and contribute.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Community CTA ────────────────────────────── -->
+    <section style="padding-top:0;">
+      <div class="container text-center">
+        <h2 class="section-title">Join the Community</h2>
+        <p class="section-sub mx-auto" style="margin-bottom:32px;">Awesome Glue exists because of its community. Contribute, share ideas, or just say hello.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Contribute on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Footer ───────────────────────────────────── -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="logo">
+              <img src="assets/logo.png" alt="Awesome Glue" class="logo-icon" width="32" height="32">
+              Awesome Glue
+            </div>
+            <p>Open-source tools, libraries, and container images for AWS Glue — built by the community, for the community.</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h5>Resources</h5>
+              <ul>
+                <li><a href="https://aws.amazon.com/glue/" target="_blank" rel="noopener">AWS Glue Docs</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5>Community</h5>
+              <ul>
+                <li><a href="https://github.com/awesome-glue" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Awesome Glue. Community-driven project.</span>
+          <span>Not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS).</span>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
