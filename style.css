@@ -28,6 +28,10 @@
   --accent-light:  #38bdf8;
   --accent-tint:   rgba(6, 104, 219, 0.12);
 
+  /* Scrollbars */
+  --scrollbar-thumb: var(--border-focus);
+  --scrollbar-track: var(--bg);
+
   /* Layout */
   --radius:        8px;
   --radius-sm:     5px;
@@ -59,21 +63,28 @@ body {
   color: #ffffff;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
+html {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--bg);
-}
+/* Legacy fallback for WebKit/Blink browsers without standard scrollbar-color support */
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--border-focus);
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--border-focus);
+  }
 }
 
 /* ── Typography & Hierarchy ─────────────────────── */
@@ -181,6 +192,10 @@ section {
 section[id],
 main[id] {
   scroll-margin-top: calc(var(--nav-height) + 1.5rem);
+}
+
+main[tabindex="-1"]:focus {
+  outline: none;
 }
 
 .text-center { text-align: center; }
