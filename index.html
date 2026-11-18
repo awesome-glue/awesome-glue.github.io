@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#060b14">
     <meta name="description" content="Open-source development stack for AWS Glue: Powertools runtime library, gtk CLI for packaging and testing, and git pre-commit hooks.">
     <title>Awesome Glue — Developer Tools for AWS Glue</title>
     <meta property="og:type" content="website">
@@ -17,83 +18,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
   </head>
   <body>
 
     <!-- ── Skip Link ─────────────────────────────────── -->
-    <a href="#main" class="skip-link">Skip to main content</a>
+    <a href="#main" class="skip-link visually-hidden">Skip to main content</a>
 
     <!-- ── Nav ──────────────────────────────────────── -->
     <nav class="nav" aria-label="Primary">
       <div class="container nav-inner">
-        <a href="#top" class="logo">
-          <img src="assets/logo.svg" alt="" class="logo-icon" width="28" height="28" aria-hidden="true">
+        <a href="#top" class="logo" aria-label="Awesome Glue home">
+          <img src="assets/logo.svg" alt="" class="logo-icon" width="26" height="24" aria-hidden="true">
           <span>Awesome Glue</span>
         </a>
         <ul class="nav-links">
           <li><a href="#tools">Tools</a></li>
           <li><a href="#ecosystem">Ecosystem</a></li>
-          <li><a href="https://github.com/awesome-glue" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#community">Community</a></li>
         </ul>
-        <div class="nav-cta">
-          <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
-            <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>Star on GitHub</span>
-          </a>
-        </div>
       </div>
     </nav>
 
     <!-- ── Hero ─────────────────────────────────────── -->
-    <header class="hero" id="top">
+    <header class="hero" id="top" tabindex="-1">
       <div class="container hero-container">
+        <div class="hero-brandmark" aria-hidden="true">
+          <svg class="hero-brandmark-icon" viewBox="300 215 616 568" fill="none" aria-hidden="true" width="124" height="114">
+            <defs>
+              <linearGradient id="hero-fish-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#124996"/>
+                <stop offset="100%" stop-color="#0b326d"/>
+              </linearGradient>
+              <linearGradient id="hero-fish-navy" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0e3d82"/>
+                <stop offset="100%" stop-color="#082554"/>
+              </linearGradient>
+              <linearGradient id="hero-fish-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#0875EA"/>
+                <stop offset="100%" stop-color="#065bb8"/>
+              </linearGradient>
+            </defs>
+            <!-- White Underbelly -->
+            <path class="hero-fish-belly" fill="#FFFFFF" fill-rule="evenodd" d="M 894.00 618.00 C 893.19 621.28 891.91 625.10 890.49 628.86 C 889.07 632.63 887.52 636.33 885.83 639.97 C 884.15 643.61 882.34 647.18 880.41 650.70 C 878.48 654.21 876.43 657.66 874.27 661.04 C 872.11 664.42 869.84 667.73 867.47 670.97 C 865.09 674.21 862.62 677.38 860.05 680.48 C 857.48 683.58 854.81 686.60 852.06 689.55 C 849.31 692.50 846.48 695.38 843.57 698.17 C 840.66 700.97 837.67 703.68 834.61 706.32 C 831.55 708.96 828.43 711.51 825.24 713.99 C 822.06 716.46 818.82 718.85 815.52 721.15 C 812.22 723.45 808.88 725.67 805.49 727.80 C 802.10 729.92 798.67 731.96 795.20 733.91 C 791.73 735.86 788.23 737.71 784.69 739.48 C 781.16 741.25 777.59 742.94 773.99 744.54 C 770.39 746.14 766.77 747.66 763.11 749.10 C 759.45 750.54 755.77 751.90 752.06 753.18 C 748.35 754.47 744.61 755.67 740.85 756.81 C 737.09 757.95 733.31 759.01 729.50 760.01 C 725.70 761.01 721.87 761.93 718.03 762.80 C 714.19 763.66 710.33 764.46 706.45 765.20 C 702.57 765.94 698.68 766.62 694.77 767.24 C 690.86 767.86 686.94 768.42 683.01 768.93 C 679.08 769.44 674.95 770.59 671.00 771.00 L 670.89 740.23 C 674.22 737.96 677.50 735.58 680.74 733.11 C 683.98 730.64 687.17 728.07 690.31 725.42 C 693.46 722.77 696.56 720.03 699.62 717.21 C 702.68 714.39 705.69 711.50 708.68 708.54 C 711.66 705.59 714.62 702.58 717.55 699.53 C 720.49 696.48 723.40 693.39 726.30 690.29 C 729.20 687.19 732.10 684.07 734.99 680.95 C 737.89 677.83 740.78 674.71 743.68 671.62 C 746.59 668.53 749.51 665.46 752.44 662.43 C 755.38 659.41 758.34 656.42 761.34 653.50 C 764.33 650.58 767.35 647.73 770.42 644.96 C 773.49 642.18 776.60 639.49 779.76 636.91 C 782.93 634.32 786.15 631.84 789.43 629.48 C 792.71 627.13 796.06 624.89 799.48 622.80 C 802.90 620.71 806.39 618.77 809.96 616.97 C 813.52 615.17 817.16 613.52 820.85 612.02 C 824.55 610.52 828.31 609.16 832.13 607.96 C 835.94 606.76 839.81 605.71 843.74 604.82 C 847.66 603.93 851.63 603.19 855.65 602.61 C 859.67 602.03 863.73 601.60 867.83 601.34 C 871.93 601.08 876.07 600.97 880.24 601.03 C 884.41 601.09 888.62 601.31 892.84 601.69 C 897.07 602.08 900.73 601.28 905.00 602.00 L 894.00 618.00 Z"/>
+            <!-- Spout Droplets -->
+            <path class="hero-fish-droplet hero-fish-droplet-top" fill="#124996" fill-rule="evenodd" d="M 641.00 229.00 L 640.00 250.00 L 661.00 252.00 L 663.00 231.00 C 660.42 228.22 656.51 227.65 652.46 227.72 C 648.42 227.80 644.18 228.86 641.00 229.00 Z"/>
+            <path class="hero-fish-droplet hero-fish-droplet-mid" fill="url(#hero-fish-accent)" fill-rule="evenodd" d="M 653.00 315.00 C 655.75 317.17 659.22 317.85 662.90 318.12 C 666.58 318.39 670.47 318.23 674.26 318.02 C 678.05 317.81 681.74 316.97 685.00 317.00 L 687.00 286.00 C 684.25 283.64 681.06 283.16 677.55 283.00 C 674.03 282.83 670.06 282.77 666.13 282.67 C 662.19 282.57 658.45 282.73 656.08 284.32 C 653.72 285.91 652.88 289.08 652.69 292.76 C 652.49 296.45 652.87 300.53 653.05 304.24 C 653.24 307.95 653.53 311.68 653.00 315.00 Z"/>
+            <path class="hero-fish-droplet hero-fish-droplet-low" fill="#124996" fill-rule="evenodd" d="M 607.00 343.00 L 606.00 377.00 C 609.78 377.59 613.83 378.07 617.91 378.45 C 621.99 378.84 626.11 379.12 630.15 378.59 C 634.19 378.06 638.18 376.72 639.70 373.68 C 641.22 370.65 639.93 365.76 639.79 361.18 C 639.65 356.60 640.80 352.36 640.01 348.55 C 639.22 344.75 636.05 342.42 631.88 341.99 C 627.72 341.55 623.33 341.69 619.08 341.92 C 614.83 342.14 610.69 343.04 607.00 343.00 Z"/>
+            <!-- Whale Body -->
+            <path class="hero-fish-body" fill="url(#hero-fish-body)" fill-rule="evenodd" d="M 311.00 374.00 C 311.63 378.10 312.12 381.87 313.01 385.67 C 313.91 389.46 315.21 393.28 316.84 397.04 C 318.47 400.79 320.44 404.48 322.68 408.01 C 324.92 411.54 327.42 414.91 330.14 418.03 C 332.85 421.16 335.76 424.03 338.81 426.57 C 341.86 429.10 345.05 431.29 348.38 433.30 C 351.72 435.30 355.20 437.12 358.86 438.91 C 362.51 440.71 366.39 442.47 370.31 444.38 C 374.24 446.28 378.13 448.32 381.43 450.67 C 384.73 453.02 387.44 455.68 389.01 458.81 C 390.58 461.94 390.90 465.66 389.99 469.40 C 389.07 473.14 387.08 476.86 384.83 480.41 C 382.59 483.96 380.09 487.39 377.96 490.82 C 375.82 494.24 373.94 497.65 372.26 501.12 C 370.58 504.58 369.11 508.11 367.79 511.76 C 366.48 515.41 365.31 519.21 364.28 523.12 C 363.26 527.03 362.38 531.04 361.64 535.13 C 360.90 539.22 360.31 543.38 359.86 547.56 C 359.40 551.75 359.09 555.96 358.92 560.16 C 358.75 564.36 358.72 568.55 358.83 572.69 C 358.94 576.84 359.18 580.95 359.56 585.03 C 359.94 589.10 360.46 593.14 361.10 597.14 C 361.75 601.14 362.53 605.11 363.43 609.03 C 364.34 612.95 365.37 616.83 366.52 620.67 C 367.68 624.50 368.96 628.30 370.37 632.04 C 371.77 635.79 373.29 639.49 374.93 643.14 C 376.57 646.79 378.33 650.40 380.21 653.95 C 382.08 657.50 384.07 661.00 386.17 664.45 C 388.27 667.90 390.48 671.29 392.80 674.63 C 395.12 677.96 397.55 681.24 400.07 684.46 C 402.59 687.68 405.22 690.83 407.93 693.92 C 410.64 697.00 413.44 700.02 416.32 702.97 C 419.21 705.91 422.17 708.79 425.21 711.58 C 428.24 714.38 431.35 717.09 434.53 719.72 C 437.70 722.36 440.94 724.90 444.24 727.36 C 447.54 729.82 450.89 732.19 454.29 734.47 C 457.69 736.74 461.14 738.92 464.63 741.01 C 468.11 743.09 471.64 745.07 475.20 746.94 C 478.76 748.82 482.35 750.59 485.97 752.25 C 489.58 753.91 493.21 755.46 496.87 756.90 C 500.54 758.34 504.23 759.67 507.96 760.89 C 511.69 762.11 515.46 763.22 519.28 764.22 C 523.10 765.23 526.97 766.12 530.91 766.92 C 534.85 767.71 538.85 768.40 542.92 768.99 C 546.99 769.57 551.13 770.06 555.31 770.42 C 559.49 770.79 563.71 771.04 567.94 771.16 C 572.16 771.28 576.39 771.27 580.59 771.11 C 584.79 770.96 588.96 770.66 593.07 770.21 C 597.18 769.76 601.23 769.15 605.22 768.39 C 609.21 767.63 613.14 766.72 617.01 765.67 C 620.88 764.61 624.69 763.42 628.44 762.09 C 632.19 760.76 635.89 759.30 639.53 757.71 C 643.18 756.13 646.76 754.41 650.30 752.58 C 653.83 750.75 657.31 748.80 660.74 746.74 C 664.18 744.68 667.56 742.50 670.89 740.23 C 674.22 737.96 677.50 735.58 680.74 733.11 C 683.98 730.64 687.17 728.07 690.31 725.42 C 693.46 722.77 696.56 720.03 699.62 717.21 C 702.68 714.39 705.69 711.50 708.68 708.54 C 711.66 705.59 714.62 702.58 717.55 699.53 C 720.49 696.48 723.40 693.39 726.30 690.29 C 729.20 687.19 732.10 684.07 734.99 680.95 C 737.89 677.83 740.78 674.71 743.68 671.62 C 746.59 668.53 749.51 665.46 752.44 662.43 C 755.38 659.41 758.34 656.42 761.34 653.50 C 764.33 650.58 767.35 647.73 770.42 644.96 C 773.49 642.18 776.60 639.49 779.76 636.91 C 782.93 634.32 786.15 631.84 789.43 629.48 C 792.71 627.13 796.06 624.89 799.48 622.80 C 802.90 620.71 806.39 618.77 809.96 616.97 C 813.52 615.17 817.16 613.52 820.85 612.02 C 824.55 610.52 828.31 609.16 832.13 607.96 C 835.94 606.76 839.81 605.71 843.74 604.82 C 847.66 603.93 851.63 603.19 855.65 602.61 C 859.67 602.03 863.73 601.60 867.83 601.34 C 871.93 601.08 876.07 600.97 880.24 601.03 C 884.41 601.09 888.62 601.31 892.84 601.69 C 897.07 602.08 900.73 601.28 905.00 602.00 C 905.76 598.14 905.96 593.75 905.81 589.48 C 905.65 585.21 905.13 581.05 904.28 577.02 C 903.44 572.99 902.27 569.09 900.81 565.32 C 899.36 561.55 897.61 557.91 895.62 554.41 C 893.62 550.91 891.37 547.55 888.91 544.35 C 886.45 541.14 883.77 538.08 880.92 535.17 C 878.06 532.27 875.03 529.52 871.85 526.93 C 868.68 524.35 865.36 521.92 861.94 519.67 C 858.52 517.42 854.99 515.34 851.39 513.44 C 847.79 511.53 844.10 509.80 840.35 508.23 C 836.59 506.66 832.77 505.25 828.87 503.99 C 824.98 502.73 821.02 501.63 817.01 500.66 C 812.99 499.70 808.92 498.87 804.80 498.18 C 800.68 497.49 796.51 496.94 792.33 496.53 C 788.15 496.12 783.95 495.85 779.75 495.72 C 775.56 495.60 771.37 495.62 767.21 495.80 C 763.06 495.97 758.94 496.30 754.86 496.78 C 750.78 497.25 746.75 497.88 742.75 498.65 C 738.76 499.42 734.81 500.33 730.91 501.37 C 727.00 502.42 723.14 503.60 719.33 504.90 C 715.51 506.21 711.74 507.64 708.02 509.20 C 704.29 510.76 700.62 512.43 696.99 514.22 C 693.36 516.01 689.78 517.91 686.25 519.92 C 682.72 521.93 679.23 524.05 675.80 526.27 C 672.37 528.48 668.99 530.80 665.66 533.20 C 662.33 535.61 659.05 538.10 655.80 540.66 C 652.55 543.21 649.33 545.83 646.14 548.50 C 642.94 551.16 639.77 553.86 636.60 556.59 C 633.43 559.31 630.27 562.05 627.11 564.79 C 623.95 567.53 620.78 570.27 617.60 572.98 C 614.41 575.70 611.21 578.38 607.98 581.02 C 604.74 583.66 601.48 586.25 598.18 588.78 C 594.87 591.30 591.52 593.75 588.12 596.11 C 584.71 598.47 581.53 600.85 578.00 603.00 L 574.00 523.00 C 570.36 521.65 566.52 522.38 562.67 522.65 C 558.81 522.91 554.96 522.50 551.09 522.36 C 547.22 522.22 543.34 522.38 539.46 522.50 C 535.58 522.62 531.70 522.68 527.84 522.63 C 523.97 522.59 520.12 522.45 516.26 522.40 C 512.40 522.35 508.52 522.40 504.81 522.45 C 501.09 522.50 497.54 522.55 493.90 522.69 C 490.27 522.83 486.54 523.19 483.00 523.00 C 481.44 526.23 481.69 529.96 482.45 533.55 C 483.22 537.14 484.50 540.60 486.21 543.86 C 487.91 547.12 490.03 550.18 492.48 553.00 C 494.92 555.82 497.69 558.39 500.69 560.65 C 503.69 562.92 506.91 564.87 510.28 566.51 C 513.65 568.15 517.17 569.46 520.76 570.45 C 524.35 571.44 528.02 572.10 531.67 572.42 C 535.33 572.74 538.42 574.37 542.00 574.00 L 542.00 623.00 C 538.38 624.42 534.66 625.99 530.83 627.32 C 527.00 628.64 523.06 629.72 519.06 630.56 C 515.05 631.39 510.97 631.98 506.87 632.32 C 502.76 632.66 498.62 632.76 494.49 632.61 C 490.35 632.47 486.23 632.08 482.14 631.45 C 478.06 630.83 474.02 629.96 470.07 628.85 C 466.11 627.74 462.24 626.39 458.48 624.81 C 454.73 623.22 451.09 621.40 447.61 619.34 C 444.14 617.28 440.82 614.98 437.69 612.46 C 434.55 609.94 431.60 607.20 428.83 604.27 C 426.07 601.34 423.49 598.23 421.12 594.95 C 418.74 591.68 416.57 588.24 414.61 584.68 C 412.65 581.12 410.89 577.42 409.36 573.63 C 407.84 569.84 406.53 565.94 405.45 561.98 C 404.38 558.01 403.54 553.98 402.94 549.90 C 402.34 545.82 401.98 541.70 401.88 537.57 C 401.78 533.44 401.93 529.29 402.35 525.17 C 402.77 521.04 403.45 516.93 404.40 512.88 C 405.35 508.83 406.56 504.84 408.04 500.98 C 409.52 497.11 411.25 493.36 413.25 489.79 C 415.24 486.21 417.49 482.81 420.00 479.63 C 422.51 476.45 425.27 473.50 428.28 470.82 C 431.29 468.14 434.54 465.74 437.98 463.65 C 441.42 461.55 445.06 459.76 448.83 458.30 C 452.60 456.85 456.52 455.76 460.51 454.87 C 464.50 453.97 468.56 453.26 472.61 452.53 C 476.66 451.80 480.70 451.06 484.66 450.14 C 488.62 449.22 492.51 448.13 496.26 446.72 C 500.00 445.31 503.60 443.54 507.01 441.42 C 510.41 439.30 513.62 436.84 516.58 434.07 C 519.55 431.31 522.27 428.25 524.70 424.95 C 527.14 421.64 529.28 418.10 531.11 414.40 C 532.95 410.69 534.47 406.84 535.64 402.90 C 536.82 398.97 537.66 394.97 538.12 390.97 C 538.59 386.98 538.30 382.89 538.00 379.00 C 534.80 379.77 531.16 380.92 527.44 381.90 C 523.71 382.89 519.91 383.71 516.06 384.44 C 512.21 385.17 508.31 385.81 504.40 386.42 C 500.48 387.02 496.54 387.61 492.61 388.23 C 488.68 388.85 484.76 389.52 480.88 390.29 C 477.00 391.06 473.16 391.95 469.38 393.00 C 465.60 394.05 461.89 395.26 458.28 396.67 C 454.66 398.07 451.14 399.67 447.73 401.50 C 444.33 403.33 441.04 405.38 437.90 407.70 C 434.76 410.01 431.76 412.59 428.93 415.46 C 426.11 418.33 423.45 421.49 421.00 424.98 C 418.54 428.47 416.03 430.82 414.00 435.00 C 412.46 431.66 411.05 427.87 409.35 424.25 C 407.66 420.63 405.68 417.18 403.46 413.89 C 401.23 410.61 398.77 407.51 396.09 404.59 C 393.42 401.66 390.54 398.93 387.50 396.38 C 384.46 393.84 381.25 391.49 377.91 389.35 C 374.58 387.20 371.12 385.26 367.57 383.53 C 364.02 381.81 360.38 380.29 356.68 378.97 C 352.97 377.65 349.20 376.53 345.38 375.60 C 341.56 374.67 337.70 373.92 333.81 373.35 C 329.92 372.78 326.01 372.38 322.09 372.15 C 318.18 371.92 314.90 373.92 311.00 374.00 Z"/>
+            <!-- Cargo Containers -->
+            <path class="hero-fish-cargo hero-fish-cargo-top" fill="url(#hero-fish-accent)" fill-rule="evenodd" d="M 688.00 371.00 C 685.87 373.92 685.24 377.16 685.10 380.46 C 684.96 383.76 685.31 387.13 685.58 390.50 C 685.86 393.87 686.01 397.26 686.01 400.52 C 686.00 403.78 686.34 407.15 686.00 410.00 C 688.46 411.95 691.48 412.56 694.66 412.89 C 697.84 413.23 701.17 413.29 704.54 413.24 C 707.90 413.18 711.29 413.00 714.58 412.86 C 717.87 412.71 721.04 411.93 724.00 412.00 C 725.97 409.46 726.57 406.36 726.90 403.09 C 727.23 399.83 727.29 396.41 727.23 392.96 C 727.18 389.52 727.00 386.04 726.86 382.67 C 726.71 379.30 725.93 376.05 726.00 373.00 C 723.49 371.16 720.49 370.50 717.33 370.13 C 714.16 369.76 710.83 369.69 707.47 369.75 C 704.11 369.81 700.71 370.00 697.42 370.15 C 694.13 370.30 690.95 371.09 688.00 371.00 Z"/>
+            <path class="hero-fish-cargo hero-fish-cargo-bot" fill="url(#hero-fish-accent)" fill-rule="evenodd" d="M 620.00 479.00 L 670.00 482.00 C 672.97 479.28 674.00 476.11 674.46 472.81 C 674.92 469.50 674.81 466.06 674.58 462.51 C 674.34 458.96 674.03 455.29 673.91 451.57 C 673.80 447.86 673.81 444.11 673.90 440.47 C 673.99 436.83 673.80 433.29 674.00 430.00 C 671.04 427.13 667.45 426.26 663.71 425.96 C 659.96 425.66 656.08 425.93 652.07 426.06 C 648.06 426.18 643.90 425.96 639.76 425.75 C 635.61 425.55 631.37 425.43 627.77 426.22 C 624.17 427.01 621.49 428.90 620.13 432.04 C 618.76 435.17 618.46 439.27 618.53 443.39 C 618.61 447.51 619.02 451.75 619.10 455.77 C 619.18 459.80 619.03 463.67 619.00 467.52 C 618.97 471.38 619.44 475.01 620.00 479.00 Z"/>
+            <!-- Pectoral Fin -->
+            <path class="hero-fish-fin" fill="url(#hero-fish-navy)" fill-rule="evenodd" d="M 894.00 618.00 C 893.19 621.28 891.91 625.10 890.49 628.86 C 889.07 632.63 887.52 636.33 885.83 639.97 C 884.15 643.61 882.34 647.18 880.41 650.70 C 878.48 654.21 876.43 657.66 874.27 661.04 C 872.11 664.42 869.84 667.73 867.47 670.97 C 865.09 674.21 862.62 677.38 860.05 680.48 C 857.48 683.58 854.81 686.60 852.06 689.55 C 849.31 692.50 846.48 695.38 843.57 698.17 C 840.66 700.97 837.67 703.68 834.61 706.32 C 831.55 708.96 828.43 711.51 825.24 713.99 C 822.06 716.46 818.82 718.85 815.52 721.15 C 812.22 723.45 808.88 725.67 805.49 727.80 C 802.10 729.92 798.67 731.96 795.20 733.91 C 791.73 735.86 788.23 737.71 784.69 739.48 C 781.16 741.25 777.59 742.94 773.99 744.54 C 770.39 746.14 766.77 747.66 763.11 749.10 C 759.45 750.54 755.77 751.90 752.06 753.18 C 748.35 754.47 744.61 755.67 740.85 756.81 C 737.09 757.95 733.31 759.01 729.50 760.01 C 725.70 761.01 721.87 761.93 718.03 762.80 C 714.19 763.66 710.33 764.46 706.45 765.20 C 702.57 765.94 698.68 766.62 694.77 767.24 C 690.86 767.86 686.94 768.42 683.01 768.93 C 679.08 769.44 674.95 770.59 671.00 771.00 C 674.66 771.36 678.82 771.53 682.97 771.61 C 687.11 771.69 691.23 771.68 695.34 771.57 C 699.44 771.46 703.53 771.25 707.59 770.95 C 711.65 770.65 715.69 770.25 719.70 769.76 C 723.71 769.26 727.70 768.67 731.66 767.98 C 735.62 767.30 739.55 766.51 743.45 765.63 C 747.36 764.75 751.23 763.77 755.07 762.69 C 758.90 761.61 762.71 760.44 766.48 759.16 C 770.25 757.89 773.99 756.51 777.69 755.04 C 781.39 753.57 785.05 752.00 788.67 750.33 C 792.29 748.66 795.87 746.88 799.41 745.01 C 802.94 743.14 806.44 741.17 809.89 739.10 C 813.34 737.03 816.74 734.86 820.09 732.59 C 823.44 730.32 826.73 727.96 829.96 725.51 C 833.19 723.06 836.36 720.51 839.45 717.88 C 842.54 715.25 845.56 712.53 848.50 709.73 C 851.44 706.93 854.29 704.04 857.06 701.08 C 859.83 698.12 862.50 695.07 865.08 691.96 C 867.66 688.84 870.14 685.65 872.51 682.38 C 874.88 679.12 877.15 675.79 879.30 672.39 C 881.45 668.99 883.48 665.52 885.39 661.99 C 887.29 658.46 889.08 654.87 890.72 651.22 C 892.37 647.57 893.89 643.87 895.26 640.10 C 896.63 636.34 897.87 632.52 898.95 628.66 C 900.03 624.79 900.23 620.96 901.00 617.00 C 900.12 616.05 898.68 615.70 897.31 615.89 C 895.95 616.07 894.61 616.78 894.00 618.00 Z"/>
+            <!-- Eye -->
+            <circle class="hero-fish-eye-sclera" cx="716" cy="628" r="15.5" fill="#FFFFFF"/>
+            <circle class="hero-fish-eye-pupil" cx="719" cy="629" r="8.5" fill="#092858"/>
+            <circle class="hero-fish-eye-shine" cx="715.5" cy="625" r="3" fill="#FFFFFF"/>
+          </svg>
+        </div>
         <h1>The Developer Stack<br>for <span class="hero-accent">AWS Glue</span></h1>
         <p class="hero-desc">Write typed ETL jobs with Powertools, test locally and package production wheels with the gtk CLI, and enforce quality gates on commit.</p>
-        <div class="hero-actions">
-          <a href="#tools" class="btn btn-primary">See the Tools</a>
-          <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-secondary">
-            <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            <span>View on GitHub</span>
-          </a>
-        </div>
-        <div class="hero-install">
-          <button type="button" class="hero-cmd-pill" data-copy="pip install aws-glue-powertools aws-glue-toolkit" title="Copy install command">
-            <span class="cmd-prompt" aria-hidden="true">$</span>
-            <code>pip install aws-glue-powertools aws-glue-toolkit</code>
-            <span class="copy-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
-          </button>
-        </div>
       </div>
+      <!-- Scroll indicator cue -->
+      <a href="#tools" class="hero-scroll-cue" aria-label="Explore Core Tools">
+        <span>Explore Tools</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </a>
     </header>
 
     <!-- ── Main Content ─────────────────────────────── -->
     <main id="main" tabindex="-1">
 
       <!-- ── The Core Tools (Split Rows) ─────────────── -->
-      <section id="tools" class="section-tools">
+      <section id="tools" class="section-tools" tabindex="-1">
         <div class="container">
           <div class="section-header text-center">
             <h2 class="section-title">Core Tools</h2>
-            <p class="section-sub mx-auto">Two foundational tools providing in-job typing and terminal automation for AWS Glue.</p>
+            <p class="section-sub mx-auto">Two foundational tools to implement AWS Glue best practices, automate local workflows, and accelerate developer velocity.</p>
           </div>
 
           <div class="tools-stack">
             <!-- Tool 1: Powertools for AWS Glue -->
             <article class="tool-split" id="powertools">
               <div class="tool-content">
-                <div class="tool-header">
-                  <div class="tool-icon-wrap" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m12 2 10 5-10 5L2 7l10-5Z"/>
-                      <path d="m2 17 10 5 10-5"/>
-                      <path d="m2 12 10 5 10-5"/>
-                    </svg>
-                  </div>
-                  <span class="tool-badge">Runtime Library</span>
-                </div>
-                <h3>Powertools for AWS Glue</h3>
-                <p class="tool-desc">Eliminate boilerplate context management and gain typed argument validation via dataclasses or Pydantic. Best practices for logging and Spark sessions are built into the job harness.</p>
+                <h3 class="tool-title">
+                  <svg class="tool-title-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m16 6 4 14"/>
+                    <path d="M12 6v14"/>
+                    <path d="M8 8v12"/>
+                    <path d="M4 4v16"/>
+                    <path d="M2 20h20"/>
+                  </svg>
+                  <span>Powertools for AWS Glue</span>
+                </h3>
+                <p class="tool-desc">Implement AWS Glue best practices with automated job lifecycles, zero-boilerplate Spark sessions, and typed argument validation via dataclasses or Pydantic.</p>
 
                 <ul class="tool-features">
                   <li>
@@ -111,11 +133,17 @@
                 </ul>
 
                 <div class="tool-actions">
-                  <button type="button" class="code-pill" data-copy="pip install aws-glue-powertools" title="Copy install command">
-                    <code>pip install aws-glue-powertools</code>
-                    <span class="copy-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
-                  </button>
-                  <a href="https://github.com/HH-MWB/aws-glue-powertools" target="_blank" rel="noopener" class="card-link">Repository &rarr;</a>
+                  <span class="copy-wrap">
+                    <button type="button" class="code-pill" command="--copy" commandfor="cmd-powertools" aria-label="Copy install command: pip install aws-glue-powertools">
+                      <code id="cmd-powertools">pip install aws-glue-powertools</code>
+                      <span class="copy-icon copy-icon-default" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
+                      <span class="copy-icon copy-icon-copied" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                    </button>
+                    <span class="tip visually-hidden" role="status"></span>
+                  </span>
+                  <a href="https://github.com/HH-MWB/aws-glue-powertools" target="_blank" rel="noopener" class="tool-github-link" aria-label="Powertools for AWS Glue on GitHub" title="View repository on GitHub">
+                    <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </a>
                 </div>
               </div>
 
@@ -127,10 +155,16 @@
                       <span class="dot dot-yellow"></span>
                       <span class="dot dot-green"></span>
                     </div>
-                    <span class="window-title">etl_job/__main__.py</span>
-                    <button type="button" class="btn-copy-code" data-copy-target="code-powertools" aria-label="Copy code">Copy</button>
+                    <span class="window-title" id="powertools-code-title">etl_job/__main__.py</span>
+                    <span class="copy-wrap">
+                      <button type="button" class="btn-copy-code" command="--copy" commandfor="snippet-powertools" aria-label="Copy etl_job/__main__.py code">
+                        <span class="btn-label-copy">Copy</span>
+                        <span class="btn-label-copied" aria-hidden="true">Copied!</span>
+                      </button>
+                      <span class="tip visually-hidden" role="status"></span>
+                    </span>
                   </div>
-                  <pre><code><span class="code-keyword">from</span> dataclasses <span class="code-keyword">import</span> dataclass
+                  <pre role="region" aria-labelledby="powertools-code-title" tabindex="0"><code id="snippet-powertools"><span class="code-keyword">from</span> dataclasses <span class="code-keyword">import</span> dataclass
 <span class="code-keyword">from</span> datetime <span class="code-keyword">import</span> date
 <span class="code-keyword">from</span> aws_glue_powertools.jobs.spark <span class="code-keyword">import</span> BatchJob, SparkJobContext
 
@@ -153,16 +187,13 @@
             <!-- Tool 2: AWS Glue Toolkit (gtk) -->
             <article class="tool-split" id="toolkit">
               <div class="tool-content">
-                <div class="tool-header">
-                  <div class="tool-icon-wrap" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="4 17 10 11 4 5"/>
-                      <line x1="12" x2="20" y1="19" y2="19"/>
-                    </svg>
-                  </div>
-                  <span class="tool-badge">CLI &amp; Packaging</span>
-                </div>
-                <h3>AWS Glue Toolkit</h3>
+                <h3 class="tool-title">
+                  <svg class="tool-title-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="4 17 10 11 4 5"/>
+                    <line x1="12" x2="20" y1="19" y2="19"/>
+                  </svg>
+                  <span>AWS Glue Toolkit</span>
+                </h3>
                 <p class="tool-desc">Configure dependencies in pyproject.toml, run pytest inside Glue Docker containers, and generate deployment wheels that resolve runtime pins automatically.</p>
 
                 <ul class="tool-features">
@@ -181,11 +212,17 @@
                 </ul>
 
                 <div class="tool-actions">
-                  <button type="button" class="code-pill" data-copy="pip install aws-glue-toolkit" title="Copy install command">
-                    <code>pip install aws-glue-toolkit</code>
-                    <span class="copy-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
-                  </button>
-                  <a href="https://github.com/awesome-glue/aws-glue-toolkit" target="_blank" rel="noopener" class="card-link">Repository &rarr;</a>
+                  <span class="copy-wrap">
+                    <button type="button" class="code-pill" command="--copy" commandfor="cmd-gtk" aria-label="Copy install command: pip install aws-glue-toolkit">
+                      <code id="cmd-gtk">pip install aws-glue-toolkit</code>
+                      <span class="copy-icon copy-icon-default" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
+                      <span class="copy-icon copy-icon-copied" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                    </button>
+                    <span class="tip visually-hidden" role="status"></span>
+                  </span>
+                  <a href="https://github.com/awesome-glue/aws-glue-toolkit" target="_blank" rel="noopener" class="tool-github-link" aria-label="AWS Glue Toolkit on GitHub" title="View repository on GitHub">
+                    <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </a>
                 </div>
               </div>
 
@@ -197,14 +234,24 @@
                       <span class="dot dot-yellow"></span>
                       <span class="dot dot-green"></span>
                     </div>
-                    <div class="code-tabs" role="tablist" aria-label="Toolkit Code Examples">
-                      <button type="button" class="tab-btn active" data-tab="tab-term" role="tab" aria-selected="true">Terminal</button>
-                      <button type="button" class="tab-btn" data-tab="tab-toml" role="tab" aria-selected="false">pyproject.toml</button>
+                    <div class="code-tabs" role="tablist" focusgroup="tablist nomemory" aria-label="Toolkit Code Examples">
+                      <button type="button" class="tab-btn active" data-tab="tab-term" id="tab-btn-term" role="tab" aria-selected="true" aria-controls="tab-term" focusgroupstart>Terminal</button>
+                      <button type="button" class="tab-btn" data-tab="tab-toml" id="tab-btn-toml" role="tab" aria-selected="false" aria-controls="tab-toml">pyproject.toml</button>
                     </div>
-                    <button type="button" class="btn-copy-code" data-copy-target="code-gtk" aria-label="Copy code">Copy</button>
+                    <span class="copy-wrap">
+                      <button type="button" class="btn-copy-code" command="--copy" commandfor="snippet-term" aria-label="Copy active toolkit code example">
+                        <span class="btn-label-copy">Copy</span>
+                        <span class="btn-label-copied" aria-hidden="true">Copied!</span>
+                      </button>
+                      <span class="tip visually-hidden" role="status"></span>
+                    </span>
                   </div>
-                  <div class="tab-panel active" id="tab-term">
-                    <pre><code><span class="code-comment"># Run pytest locally inside Glue Docker container</span>
+                  <div class="tab-panel active" id="tab-term" role="tabpanel" aria-labelledby="tab-btn-term" tabindex="0">
+                    <pre role="region" aria-labelledby="tab-btn-term" tabindex="0"><code id="snippet-term"><span class="code-comment"># Run Glue job locally inside Glue container</span>
+$ gtk run .
+<span class="code-comment"># &gt; Job finished successfully in 2.31s</span>
+
+<span class="code-comment"># Run pytest locally inside Glue Docker container</span>
 $ gtk test .
 <span class="code-str">=================== 4 passed in 1.48s ===================</span>
 
@@ -213,8 +260,8 @@ $ gtk build .
 <span class="code-comment"># &gt; Created my-glue-job-0.1.0.dependencies.zip</span>
 <span class="code-comment"># &gt; Created my-glue-job-0.1.0.gluewheels.zip</span></code></pre>
                   </div>
-                  <div class="tab-panel" id="tab-toml">
-                    <pre><code>[project]
+                  <div class="tab-panel" id="tab-toml" role="tabpanel" aria-labelledby="tab-btn-toml" hidden="until-found">
+                    <pre role="region" aria-labelledby="tab-btn-toml" tabindex="0"><code id="snippet-toml">[project]
 name = <span class="code-str">"my-glue-job"</span>
 version = <span class="code-str">"0.1.0"</span>
 dependencies = [
@@ -223,7 +270,9 @@ dependencies = [
 
 [tool.aws-glue-toolkit]
 glue_version = <span class="code-str">"5.0"</span>
-source = <span class="code-str">"etl_job"</span></code></pre>
+source = <span class="code-str">"etl_job"</span>
+script = <span class="code-str">"__main__.py"</span>
+test = <span class="code-str">"tests"</span></code></pre>
                   </div>
                 </div>
               </div>
@@ -234,7 +283,7 @@ source = <span class="code-str">"etl_job"</span></code></pre>
       </section>
 
       <!-- ── Ecosystem ─────────────────────────────────── -->
-      <section id="ecosystem" class="section-ecosystem">
+      <section id="ecosystem" class="section-ecosystem" tabindex="-1">
         <div class="container">
           <div class="section-header text-center">
             <h2 class="section-title">Ecosystem</h2>
@@ -242,7 +291,7 @@ source = <span class="code-str">"etl_job"</span></code></pre>
           </div>
 
           <div class="eco-grid">
-            <!-- Item 1: Pre-commit Hooks (Available) -->
+            <!-- Item 1: Pre-commit Hooks -->
             <article class="eco-card" id="pre-commit">
               <div class="eco-header">
                 <div class="eco-icon-wrap" aria-hidden="true">
@@ -260,8 +309,8 @@ source = <span class="code-str">"etl_job"</span></code></pre>
               </div>
             </article>
 
-            <!-- Item 2: Container Images (Roadmap) -->
-            <article class="eco-card">
+            <!-- Item 2: Container Images -->
+            <article class="eco-card" id="container-images">
               <div class="eco-header">
                 <div class="eco-icon-wrap" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -272,7 +321,7 @@ source = <span class="code-str">"etl_job"</span></code></pre>
                     <path d="M17 4.9v8.6"/>
                   </svg>
                 </div>
-                <span class="eco-badge eco-badge-roadmap">Roadmap</span>
+                <span class="eco-badge eco-badge-roadmap">Coming Soon</span>
               </div>
               <h3>Container Images</h3>
               <p>Prebuilt, version-pinned Docker images for local AWS Glue simulation, interactive debugging, and fast CI test runners.</p>
@@ -281,8 +330,8 @@ source = <span class="code-str">"etl_job"</span></code></pre>
               </div>
             </article>
 
-            <!-- Item 3: IaC Templates (Roadmap) -->
-            <article class="eco-card">
+            <!-- Item 3: IaC Templates -->
+            <article class="eco-card" id="iac-templates">
               <div class="eco-header">
                 <div class="eco-icon-wrap" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -291,7 +340,7 @@ source = <span class="code-str">"etl_job"</span></code></pre>
                     <polyline points="2 12 12 17 22 12"/>
                   </svg>
                 </div>
-                <span class="eco-badge eco-badge-roadmap">Roadmap</span>
+                <span class="eco-badge eco-badge-roadmap">Coming Soon</span>
               </div>
               <h3>IaC Templates</h3>
               <p>Production Terraform modules and AWS CDK constructs for automated Glue job provisioning and wheel artifact deployment.</p>
@@ -304,14 +353,14 @@ source = <span class="code-str">"etl_job"</span></code></pre>
       </section>
 
       <!-- ── Community CTA ────────────────────────────── -->
-      <section class="section-community">
+      <section id="community" class="section-community" tabindex="-1">
         <div class="container text-center">
           <h2 class="section-title">Join the Community</h2>
           <p class="section-sub mx-auto">Awesome Glue is built by and for data engineers. Contribute code, suggest tools, or report issues on GitHub.</p>
-          <div class="hero-actions">
+          <div class="community-actions">
             <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-primary">
               <svg aria-hidden="true" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              <span>Contribute on GitHub</span>
+              <span>View on GitHub</span>
             </a>
           </div>
         </div>
@@ -321,119 +370,14 @@ source = <span class="code-str">"etl_job"</span></code></pre>
 
     <!-- ── Footer ───────────────────────────────────── -->
     <footer>
-      <div class="container">
-        <div class="footer-inner">
-          <div class="footer-brand">
-            <div class="logo">
-              <img src="assets/logo.svg" alt="" class="logo-icon" width="28" height="28" aria-hidden="true">
-              Awesome Glue
-            </div>
-            <p>Open-source developer tools and automated best practices for AWS Glue engineers.</p>
-          </div>
-          <div class="footer-links">
-            <div>
-              <div class="footer-title">Tools</div>
-              <ul>
-                <li><a href="#powertools">Powertools</a></li>
-                <li><a href="#toolkit">AWS Glue Toolkit</a></li>
-              </ul>
-            </div>
-            <div>
-              <div class="footer-title">Ecosystem</div>
-              <ul>
-                <li><a href="#pre-commit">Pre-commit Hooks</a></li>
-                <li><a href="#ecosystem">Container Images</a></li>
-                <li><a href="#ecosystem">IaC Templates</a></li>
-              </ul>
-            </div>
-            <div>
-              <div class="footer-title">Organization</div>
-              <ul>
-                <li><a href="https://github.com/awesome-glue" target="_blank" rel="noopener">GitHub</a></li>
-                <li><a href="https://github.com/awesome-glue/aws-glue-toolkit" target="_blank" rel="noopener">Toolkit Repo</a></li>
-                <li><a href="https://github.com/HH-MWB/aws-glue-powertools" target="_blank" rel="noopener">Powertools Repo</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>&copy; 2026 Awesome Glue. Released under open-source licenses.</span>
-          <span>Not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS).</span>
-        </div>
+      <div class="container footer-bottom">
+        <span>&copy; 2026 Awesome Glue.</span>
+        <span>Not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS).</span>
       </div>
     </footer>
 
     <!-- ── Interactive Scripts ──────────────────────── -->
-    <script>
-      const copySvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
-      const checkSvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
-
-      // Pill copy buttons
-      document.querySelectorAll('[data-copy]').forEach(button => {
-        button.addEventListener('click', async () => {
-          const text = button.getAttribute('data-copy');
-          try {
-            await navigator.clipboard.writeText(text);
-            const icon = button.querySelector('.copy-icon');
-            if (icon) {
-              icon.innerHTML = checkSvg;
-              button.classList.add('copied');
-              setTimeout(() => {
-                icon.innerHTML = copySvg;
-                button.classList.remove('copied');
-              }, 1800);
-            }
-          } catch (err) {
-            console.error('Failed to copy', err);
-          }
-        });
-      });
-
-      // Code block copy buttons
-      document.querySelectorAll('.btn-copy-code').forEach(button => {
-        button.addEventListener('click', async () => {
-          const targetId = button.getAttribute('data-copy-target');
-          const block = document.getElementById(targetId);
-          if (!block) return;
-          const activePanel = block.querySelector('.tab-panel.active') || block;
-          const pre = activePanel.querySelector('pre') || block.querySelector('pre');
-          if (!pre) return;
-          const codeText = pre.innerText;
-          try {
-            await navigator.clipboard.writeText(codeText);
-            const orig = button.textContent;
-            button.textContent = 'Copied!';
-            button.classList.add('copied');
-            setTimeout(() => {
-              button.textContent = orig;
-              button.classList.remove('copied');
-            }, 1800);
-          } catch (err) {
-            console.error('Failed to copy code', err);
-          }
-        });
-      });
-
-      // Tab switcher in code block
-      document.querySelectorAll('.code-tabs .tab-btn').forEach(tab => {
-        tab.addEventListener('click', () => {
-          const parent = tab.closest('.code-window');
-          if (!parent) return;
-          const tabId = tab.getAttribute('data-tab');
-
-          parent.querySelectorAll('.code-tabs .tab-btn').forEach(t => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', 'false');
-          });
-          tab.classList.add('active');
-          tab.setAttribute('aria-selected', 'true');
-
-          parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-          const targetPanel = parent.querySelector('#' + tabId);
-          if (targetPanel) targetPanel.classList.add('active');
-        });
-      });
-    </script>
+    <script defer src="main.js"></script>
 
   </body>
 </html>
