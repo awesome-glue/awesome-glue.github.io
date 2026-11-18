@@ -1,12 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type="software" data-radius="sharp" data-buttons="solid">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="color-scheme" content="dark">
-    <meta name="description" content="Open-source development stack for AWS Glue: Powertools runtime library, gtk CLI for wheel packaging and testing, and official pre-commit hooks.">
-    <title>Awesome Glue — Open-Source Developer Tools for AWS Glue</title>
+    <meta name="description" content="Open-source development stack for AWS Glue: Powertools runtime library, gtk CLI for packaging and testing, and git pre-commit hooks.">
+    <title>Awesome Glue — Developer Tools for AWS Glue</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Awesome Glue — Developer Tools for AWS Glue">
+    <meta property="og:description" content="Open-source development stack for AWS Glue: Powertools runtime library, gtk CLI for packaging and testing, and git pre-commit hooks.">
+    <meta property="og:url" content="https://awesome-glue.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="site-kind" content="software">
+    <meta name="page-type" content="software">
     <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -15,30 +25,44 @@
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <!-- ── Nav ──────────────────────────────────────── -->
-    <nav aria-label="Primary">
-      <div class="container">
-        <a href="/" class="logo">
+    <nav class="nav" aria-label="Primary">
+      <div class="container nav-inner">
+        <a href="#top" class="logo">
           <img src="assets/logo.svg" alt="" class="logo-icon" width="28" height="28" aria-hidden="true">
-          Awesome Glue
+          <span>Awesome Glue</span>
         </a>
         <ul class="nav-links">
           <li><a href="#tools">Tools</a></li>
           <li><a href="#ecosystem">Ecosystem</a></li>
           <li><a href="https://github.com/awesome-glue" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
+        <div class="nav-cta">
+          <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-sm btn-secondary">
+            <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>Star on GitHub</span>
+          </a>
+        </div>
       </div>
     </nav>
 
     <!-- ── Hero ─────────────────────────────────────── -->
-    <header class="hero">
-      <div class="container">
+    <header class="hero" id="top">
+      <div class="container hero-container">
         <h1>The Developer Stack<br>for <span class="hero-accent">AWS Glue</span></h1>
-        <p>Code typed ETL pipelines with Powertools. Test locally and package production wheels with the <code>gtk</code> CLI.</p>
+        <p class="hero-desc">Write typed ETL jobs with Powertools, test locally and package production wheels with the gtk CLI, and enforce quality gates on commit.</p>
         <div class="hero-actions">
-          <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-primary">
+          <a href="#tools" class="btn btn-primary">See the Tools</a>
+          <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-secondary">
             <svg aria-hidden="true" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            View on GitHub
+            <span>View on GitHub</span>
           </a>
+        </div>
+        <div class="hero-install">
+          <button type="button" class="hero-cmd-pill" data-copy="pip install aws-glue-powertools aws-glue-toolkit" title="Copy install command">
+            <span class="cmd-prompt" aria-hidden="true">$</span>
+            <code>pip install aws-glue-powertools aws-glue-toolkit</code>
+            <span class="copy-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
+          </button>
         </div>
       </div>
     </header>
@@ -46,73 +70,151 @@
     <!-- ── Main Content ─────────────────────────────── -->
     <main id="main" tabindex="-1">
 
-      <!-- ── The Stack (Core Tools) ────────────────────── -->
+      <!-- ── The Core Tools (Split Rows) ─────────────── -->
       <section id="tools" class="section-tools">
         <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title">Core Tools</h2>
+            <p class="section-sub mx-auto">Two foundational tools providing in-job typing and terminal automation for AWS Glue.</p>
+          </div>
 
-          <!-- Stage 1: Powertools -->
-          <div class="workflow-stage">
-            <div class="stage-header">
-              <div class="stage-title-wrap">
-                <span class="stage-num">01</span>
+          <div class="tools-stack">
+            <!-- Tool 1: Powertools for AWS Glue -->
+            <article class="tool-split" id="powertools">
+              <div class="tool-content">
+                <div class="tool-header">
+                  <div class="tool-icon-wrap" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m12 2 10 5-10 5L2 7l10-5Z"/>
+                      <path d="m2 17 10 5 10-5"/>
+                      <path d="m2 12 10 5 10-5"/>
+                    </svg>
+                  </div>
+                  <span class="tool-badge">Runtime Library</span>
+                </div>
                 <h3>Powertools for AWS Glue</h3>
-                <span class="stage-badge">Runtime Library</span>
-              </div>
-              <div class="stage-actions">
-                <div class="code-pill">pip install aws-glue-powertools</div>
-                <a href="https://github.com/HH-MWB/aws-glue-powertools" target="_blank" rel="noopener" class="card-link">Repository &rarr;</a>
-              </div>
-            </div>
-            <p class="stage-desc">Eliminate boilerplate context management and gain typed argument validation via dataclasses or Pydantic.</p>
+                <p class="tool-desc">Eliminate boilerplate context management and gain typed argument validation via dataclasses or Pydantic. Best practices for logging and Spark sessions are built into the job harness.</p>
 
-            <div class="code-block">
-              <div class="code-block-header">
-                <span>etl_job/__main__.py</span>
-                <span>Powertools for AWS Glue</span>
+                <ul class="tool-features">
+                  <li>
+                    <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><code>@BatchJob</code> decorator with automated lifecycle and commit</span>
+                  </li>
+                  <li>
+                    <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Typed CLI parameter conversion via dataclasses or Pydantic</span>
+                  </li>
+                  <li>
+                    <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Clean Spark session setup with zero boilerplate code</span>
+                  </li>
+                </ul>
+
+                <div class="tool-actions">
+                  <button type="button" class="code-pill" data-copy="pip install aws-glue-powertools" title="Copy install command">
+                    <code>pip install aws-glue-powertools</code>
+                    <span class="copy-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
+                  </button>
+                  <a href="https://github.com/HH-MWB/aws-glue-powertools" target="_blank" rel="noopener" class="card-link">Repository &rarr;</a>
+                </div>
               </div>
-              <pre><code><span class="code-keyword">from</span> dataclasses <span class="code-keyword">import</span> dataclass
+
+              <div class="tool-visual">
+                <div class="code-window" id="code-powertools">
+                  <div class="window-header">
+                    <div class="window-controls" aria-hidden="true">
+                      <span class="dot dot-red"></span>
+                      <span class="dot dot-yellow"></span>
+                      <span class="dot dot-green"></span>
+                    </div>
+                    <span class="window-title">etl_job/__main__.py</span>
+                    <button type="button" class="btn-copy-code" data-copy-target="code-powertools" aria-label="Copy code">Copy</button>
+                  </div>
+                  <pre><code><span class="code-keyword">from</span> dataclasses <span class="code-keyword">import</span> dataclass
 <span class="code-keyword">from</span> datetime <span class="code-keyword">import</span> date
 <span class="code-keyword">from</span> aws_glue_powertools.jobs.spark <span class="code-keyword">import</span> BatchJob, SparkJobContext
 
 <span class="code-keyword">@dataclass</span>
 <span class="code-keyword">class</span> <span class="code-fn">Params</span>:
-    target_date: <span class="code-str">date</span>  <span class="code-comment"># Auto-converted from CLI string</span>
+    target_date: <span class="code-str">date</span>  <span class="code-comment"># Auto-parsed CLI string</span>
 
 <span class="code-keyword">@BatchJob</span>()
 <span class="code-keyword">def</span> <span class="code-fn">main</span>(args: Params, ctx: SparkJobContext) -&gt; <span class="code-str">None</span>:
     spark = ctx.glue.spark_session
-    df = spark.read.parquet(<span class="code-str">f"s3://my-bucket/{args.target_date}/"</span>)
+    df = spark.read.parquet(<span class="code-str">f"s3://bucket/{args.target_date}/"</span>)
     df.write.parquet(<span class="code-str">f"{ctx.job.temp_dir}/output/"</span>)
 
 <span class="code-keyword">if</span> __name__ == <span class="code-str">"__main__"</span>:
     main()</code></pre>
-            </div>
-          </div>
-
-          <!-- Stage 2: Toolkit gtk -->
-          <div class="workflow-stage">
-            <div class="stage-header">
-              <div class="stage-title-wrap">
-                <span class="stage-num">02</span>
-                <h3>AWS Glue Toolkit</h3>
-                <span class="stage-badge">CLI &amp; Packaging</span>
-              </div>
-              <div class="stage-actions">
-                <div class="code-pill">pip install aws-glue-toolkit</div>
-                <a href="https://github.com/awesome-glue/aws-glue-toolkit" target="_blank" rel="noopener" class="card-link">Repository &rarr;</a>
-              </div>
-            </div>
-            <p class="stage-desc">Configure dependencies in standard <code>pyproject.toml</code>, run pytest inside Glue Docker containers, and generate deployment-ready wheel zips.</p>
-
-            <div class="ship-grid">
-
-              <!-- pyproject.toml -->
-              <div class="code-block">
-                <div class="code-block-header">
-                  <span>pyproject.toml</span>
-                  <span>Job Configuration</span>
                 </div>
-                <pre><code>[project]
+              </div>
+            </article>
+
+            <!-- Tool 2: AWS Glue Toolkit (gtk) -->
+            <article class="tool-split" id="toolkit">
+              <div class="tool-content">
+                <div class="tool-header">
+                  <div class="tool-icon-wrap" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="4 17 10 11 4 5"/>
+                      <line x1="12" x2="20" y1="19" y2="19"/>
+                    </svg>
+                  </div>
+                  <span class="tool-badge">CLI &amp; Packaging</span>
+                </div>
+                <h3>AWS Glue Toolkit</h3>
+                <p class="tool-desc">Configure dependencies in pyproject.toml, run pytest inside Glue Docker containers, and generate deployment wheels that resolve runtime pins automatically.</p>
+
+                <ul class="tool-features">
+                  <li>
+                    <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Standard <code>pyproject.toml</code> configuration and dependency management</span>
+                  </li>
+                  <li>
+                    <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><code>gtk test</code> for isolated local pytest execution inside Glue containers</span>
+                  </li>
+                  <li>
+                    <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span><code>gtk build</code> packages deployment zips against runtime pins</span>
+                  </li>
+                </ul>
+
+                <div class="tool-actions">
+                  <button type="button" class="code-pill" data-copy="pip install aws-glue-toolkit" title="Copy install command">
+                    <code>pip install aws-glue-toolkit</code>
+                    <span class="copy-icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
+                  </button>
+                  <a href="https://github.com/awesome-glue/aws-glue-toolkit" target="_blank" rel="noopener" class="card-link">Repository &rarr;</a>
+                </div>
+              </div>
+
+              <div class="tool-visual">
+                <div class="code-window" id="code-gtk">
+                  <div class="window-header">
+                    <div class="window-controls" aria-hidden="true">
+                      <span class="dot dot-red"></span>
+                      <span class="dot dot-yellow"></span>
+                      <span class="dot dot-green"></span>
+                    </div>
+                    <div class="code-tabs" role="tablist" aria-label="Toolkit Code Examples">
+                      <button type="button" class="tab-btn active" data-tab="tab-term" role="tab" aria-selected="true">Terminal</button>
+                      <button type="button" class="tab-btn" data-tab="tab-toml" role="tab" aria-selected="false">pyproject.toml</button>
+                    </div>
+                    <button type="button" class="btn-copy-code" data-copy-target="code-gtk" aria-label="Copy code">Copy</button>
+                  </div>
+                  <div class="tab-panel active" id="tab-term">
+                    <pre><code><span class="code-comment"># Run pytest locally inside Glue Docker container</span>
+$ gtk test .
+<span class="code-str">=================== 4 passed in 1.48s ===================</span>
+
+<span class="code-comment"># Package deployment zips against Glue runtime pins</span>
+$ gtk build .
+<span class="code-comment"># &gt; Created my-glue-job-0.1.0.dependencies.zip</span>
+<span class="code-comment"># &gt; Created my-glue-job-0.1.0.gluewheels.zip</span></code></pre>
+                  </div>
+                  <div class="tab-panel" id="tab-toml">
+                    <pre><code>[project]
 name = <span class="code-str">"my-glue-job"</span>
 version = <span class="code-str">"0.1.0"</span>
 dependencies = [
@@ -120,29 +222,12 @@ dependencies = [
 ]
 
 [tool.aws-glue-toolkit]
-glue_version = <span class="code-str">"6.0"</span>
+glue_version = <span class="code-str">"5.0"</span>
 source = <span class="code-str">"etl_job"</span></code></pre>
-              </div>
-
-              <!-- Terminal commands -->
-              <div class="code-block">
-                <div class="code-block-header">
-                  <span>Terminal</span>
-                  <span>gtk Commands</span>
+                  </div>
                 </div>
-                <pre><code><span class="code-comment"># Run pytest locally inside Glue Docker container</span>
-$ gtk test .
-
-<span class="code-comment"># Package deployment zips against Glue 6.0 runtime pins</span>
-$ gtk build .
-<span class="code-comment"># &gt; Created my-glue-job-0.1.0.dependencies.zip</span>
-<span class="code-comment"># &gt; Created my-glue-job-0.1.0.gluewheels.zip</span>
-
-<span class="code-comment"># Verified automatically on git commit</span>
-$ pre-commit run --all-files</code></pre>
               </div>
-
-            </div>
+            </article>
           </div>
 
         </div>
@@ -151,31 +236,31 @@ $ pre-commit run --all-files</code></pre>
       <!-- ── Ecosystem ─────────────────────────────────── -->
       <section id="ecosystem" class="section-ecosystem">
         <div class="container">
-          <div class="text-center">
+          <div class="section-header text-center">
             <h2 class="section-title">Ecosystem</h2>
-            <p class="section-sub mx-auto">Quality gates, local environments, and infrastructure blueprints for AWS Glue.</p>
+            <p class="section-sub mx-auto">Quality gates, local environments, and infrastructure blueprints that complete the AWS Glue lifecycle.</p>
           </div>
 
           <div class="eco-grid">
-
-            <!-- Item 1: Pre-commit -->
-            <article class="eco-card">
+            <!-- Item 1: Pre-commit Hooks (Available) -->
+            <article class="eco-card" id="pre-commit">
               <div class="eco-header">
                 <div class="eco-icon-wrap" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="m9 12 2 2 4-4"/>
                   </svg>
                 </div>
                 <span class="eco-badge eco-badge-available">Available</span>
               </div>
               <h3>Pre-commit Hooks</h3>
-              <p>Run <code>gtk-sort-deps</code> to alphabetize dependencies and <code>gtk-check-build</code> to verify Glue runtime resolution on every commit.</p>
+              <p>Run gtk-sort-deps to alphabetize dependencies and gtk-check-build to verify Glue runtime resolution on every git commit.</p>
               <div class="eco-footer">
                 <a href="https://github.com/awesome-glue/pre-commit" target="_blank" rel="noopener" class="card-link">pre-commit repo &rarr;</a>
               </div>
             </article>
 
-            <!-- Item 2: Container Images -->
+            <!-- Item 2: Container Images (Roadmap) -->
             <article class="eco-card">
               <div class="eco-header">
                 <div class="eco-icon-wrap" aria-hidden="true">
@@ -190,13 +275,13 @@ $ pre-commit run --all-files</code></pre>
                 <span class="eco-badge eco-badge-roadmap">Roadmap</span>
               </div>
               <h3>Container Images</h3>
-              <p>Prebuilt, version-pinned Docker images for local AWS Glue simulation, interactive debugging, and CI test runners.</p>
+              <p>Prebuilt, version-pinned Docker images for local AWS Glue simulation, interactive debugging, and fast CI test runners.</p>
               <div class="eco-footer">
                 <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="card-link">Follow on GitHub &rarr;</a>
               </div>
             </article>
 
-            <!-- Item 3: IaC Templates -->
+            <!-- Item 3: IaC Templates (Roadmap) -->
             <article class="eco-card">
               <div class="eco-header">
                 <div class="eco-icon-wrap" aria-hidden="true">
@@ -209,12 +294,25 @@ $ pre-commit run --all-files</code></pre>
                 <span class="eco-badge eco-badge-roadmap">Roadmap</span>
               </div>
               <h3>IaC Templates</h3>
-              <p>Production-ready Terraform modules and AWS CDK constructs for automated Glue job provisioning and wheel artifact deployment.</p>
+              <p>Production Terraform modules and AWS CDK constructs for automated Glue job provisioning and wheel artifact deployment.</p>
               <div class="eco-footer">
                 <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="card-link">Follow on GitHub &rarr;</a>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
 
+      <!-- ── Community CTA ────────────────────────────── -->
+      <section class="section-community">
+        <div class="container text-center">
+          <h2 class="section-title">Join the Community</h2>
+          <p class="section-sub mx-auto">Awesome Glue is built by and for data engineers. Contribute code, suggest tools, or report issues on GitHub.</p>
+          <div class="hero-actions">
+            <a href="https://github.com/awesome-glue" target="_blank" rel="noopener" class="btn btn-primary">
+              <svg aria-hidden="true" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>Contribute on GitHub</span>
+            </a>
           </div>
         </div>
       </section>
@@ -223,11 +321,119 @@ $ pre-commit run --all-files</code></pre>
 
     <!-- ── Footer ───────────────────────────────────── -->
     <footer>
-      <div class="container footer-bottom">
-        <span>&copy; 2026 Awesome Glue.</span>
-        <span>Not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS).</span>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="logo">
+              <img src="assets/logo.svg" alt="" class="logo-icon" width="28" height="28" aria-hidden="true">
+              Awesome Glue
+            </div>
+            <p>Open-source developer tools and automated best practices for AWS Glue engineers.</p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <div class="footer-title">Tools</div>
+              <ul>
+                <li><a href="#powertools">Powertools</a></li>
+                <li><a href="#toolkit">AWS Glue Toolkit</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="footer-title">Ecosystem</div>
+              <ul>
+                <li><a href="#pre-commit">Pre-commit Hooks</a></li>
+                <li><a href="#ecosystem">Container Images</a></li>
+                <li><a href="#ecosystem">IaC Templates</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="footer-title">Organization</div>
+              <ul>
+                <li><a href="https://github.com/awesome-glue" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://github.com/awesome-glue/aws-glue-toolkit" target="_blank" rel="noopener">Toolkit Repo</a></li>
+                <li><a href="https://github.com/HH-MWB/aws-glue-powertools" target="_blank" rel="noopener">Powertools Repo</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Awesome Glue. Released under open-source licenses.</span>
+          <span>Not affiliated with, endorsed by, or sponsored by Amazon Web Services (AWS).</span>
+        </div>
       </div>
     </footer>
+
+    <!-- ── Interactive Scripts ──────────────────────── -->
+    <script>
+      const copySvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>';
+      const checkSvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+
+      // Pill copy buttons
+      document.querySelectorAll('[data-copy]').forEach(button => {
+        button.addEventListener('click', async () => {
+          const text = button.getAttribute('data-copy');
+          try {
+            await navigator.clipboard.writeText(text);
+            const icon = button.querySelector('.copy-icon');
+            if (icon) {
+              icon.innerHTML = checkSvg;
+              button.classList.add('copied');
+              setTimeout(() => {
+                icon.innerHTML = copySvg;
+                button.classList.remove('copied');
+              }, 1800);
+            }
+          } catch (err) {
+            console.error('Failed to copy', err);
+          }
+        });
+      });
+
+      // Code block copy buttons
+      document.querySelectorAll('.btn-copy-code').forEach(button => {
+        button.addEventListener('click', async () => {
+          const targetId = button.getAttribute('data-copy-target');
+          const block = document.getElementById(targetId);
+          if (!block) return;
+          const activePanel = block.querySelector('.tab-panel.active') || block;
+          const pre = activePanel.querySelector('pre') || block.querySelector('pre');
+          if (!pre) return;
+          const codeText = pre.innerText;
+          try {
+            await navigator.clipboard.writeText(codeText);
+            const orig = button.textContent;
+            button.textContent = 'Copied!';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.textContent = orig;
+              button.classList.remove('copied');
+            }, 1800);
+          } catch (err) {
+            console.error('Failed to copy code', err);
+          }
+        });
+      });
+
+      // Tab switcher in code block
+      document.querySelectorAll('.code-tabs .tab-btn').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const parent = tab.closest('.code-window');
+          if (!parent) return;
+          const tabId = tab.getAttribute('data-tab');
+
+          parent.querySelectorAll('.code-tabs .tab-btn').forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+
+          parent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+          const targetPanel = parent.querySelector('#' + tabId);
+          if (targetPanel) targetPanel.classList.add('active');
+        });
+      });
+    </script>
 
   </body>
 </html>
